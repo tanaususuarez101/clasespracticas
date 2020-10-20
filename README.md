@@ -1,14 +1,16 @@
-Par醡etro de un m閠odo:
+# INICIALIZACI脫N EN LA PROGRAMACI脫N EN JAVA
 
-[tipo de acceso] [縎e refiere a un objecto?] [Lo que devuelve]                 [nombre del m閠odo] [Los parametros de entrada] (tipo nombrePar醡etro, ....)			
-public			  si - void					  void
-private			  no - 						  Tipo primitivo (no es un objecto)
- -				 							  Tipo no primitivo (es un objecto)
+## Estructura de un m茅todo:
+```
+[tipo de acceso] [驴Se refiere a un objecto?]  [Lo que devuelve]                 [nombre del m茅todo] [Los parametros de entrada (tipo nombrePar谩metro, ....)] 			
+public			         si - void				                void
+private			        no - 						                  Tipo primitivo (no es un objecto)
+ -				 							                                 Tipo no primitivo (es un objecto)
 protected
+```
 
-
-CONDICIONALES:
-
-|| = O -> primera condici髇 O segunda condici髇
-&& = Y -> primera condici髇 Y segunda condici髇
-
+## CONDICIONALES:
+```
+|| = O -> primera condici贸n O segunda condici贸n
+&& = Y -> primera condici贸n Y segunda condici贸n
+```
