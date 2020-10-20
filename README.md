@@ -9,7 +9,7 @@ private			        no - 						                  Tipo primitivo (no es un objecto)
 protected
 ```
 
-## CONDICIONALES:
+## CONDICIONALES lógicos:
 ```
 || = O -> primera condición O segunda condición
 && = Y -> primera condición Y segunda condición
