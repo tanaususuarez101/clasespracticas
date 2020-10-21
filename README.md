@@ -28,7 +28,7 @@ git clone https://github.com/tanaususuarez101/clasespracticas.git
 git branch -a
 ```
 
--Cambiar de rama
+- Cambiar de rama
 ```
 git checkout master
 ```
