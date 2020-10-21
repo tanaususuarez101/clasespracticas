@@ -2,14 +2,11 @@
 
 ## Estructura de un método:
 
-[tipo de acceso] | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros)
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+| [tipo de acceso] | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros) |
+| --- | --- | --- | --- | --- | 
 public | no - static | nada - void | nombre Del Método | ejemplo: int parametro1, String parámetro2
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 private | sí - no lleva static | Tipo primitivo | nombre Del Método | ejemplo: Objecto parametro1, String parámetro2
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 protected | - | Tipo no primitivo | - | -
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 anónimo | - | - | - | -
 
 ```
