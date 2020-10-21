@@ -1,6 +1,17 @@
 # INICIALIZACIÓN EN LA PROGRAMACIÓN EN JAVA
 
 ## Estructura de un método:
+
+[tipo de acceso] | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros)
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+public | no - static | nada - void | nombre Del Método | ejemplo: int parametro1, String parámetro2
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+private | sí - no lleva static | Tipo primitivo | nombre Del Método | ejemplo: Objecto parametro1, String parámetro2
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+protected | - | Tipo no primitivo | - | -
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+anónimo | - | - |- | -
+
 ```
 [tipo de acceso] [¿Se refiere a un objecto?]  [Lo que devuelve]                 [nombre del método] [Los parametros de entrada (tipo nombreParámetro, ....)] 			
 public			         si - void				                void
