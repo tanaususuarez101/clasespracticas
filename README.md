@@ -1,6 +1,6 @@
 # INICIALIZACIÓN EN LA PROGRAMACIÓN EN JAVA
 
-## Estructura de un método:
+### Estructura de un método:
 
 | [tipo de acceso] | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros) |
 | --- | --- | --- | --- | --- | 
@@ -9,21 +9,13 @@ private | sí - no lleva static | Tipo primitivo | nombre Del Método | ejemplo:
 protected | - | Tipo no primitivo | - | -
 anónimo | - | - | - | -
 
-```
-[tipo de acceso] [¿Se refiere a un objecto?]  [Lo que devuelve]                 [nombre del método] [Los parametros de entrada (tipo nombreParámetro, ....)] 			
-public			         si - void				                void
-private			        no - 						                  Tipo primitivo (no es un objecto)
- -				 							                                 Tipo no primitivo (es un objecto)
-protected
-```
-
-## CONDICIONALES lógicos:
+### CONDICIONALES lógicos:
 ```
 || = O -> primera condición O segunda condición
 && = Y -> primera condición Y segunda condición
 ```
 
-## GIT && GITHUB
+### GIT && GITHUB
 https://github.com/tanaususuarez101/clasespracticas/tree/master
 
 - clonar proyecto
