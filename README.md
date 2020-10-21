@@ -32,3 +32,26 @@ git branch -a
 ```
 git checkout master
 ```
+- Ver cambios realizados
+```
+git status
+```
+- Añadir todos los archivos mdificados
+```
+gid add *
+```
+- Realizar un commit 
+```
+git commit -m "Aquí va el mensaje"
+```
+- Subir la rama al remoto
+```
+git push origin master
+```
+
+- Descargar los cambios realizados en remoto
+```
+git pull
+```
+
+
