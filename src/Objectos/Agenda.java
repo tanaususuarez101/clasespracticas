@@ -11,11 +11,11 @@ public class Agenda {
 	 * Los constructores sirve para inicializar los atributos el objecto
 	 * */
 	public Agenda() {
-		contacto = new Contacto[10];
+		contacto = new Contacto[0];
 		nombre = "Agenda Desconocida";
 
 	}
-
+	
 	public Agenda(int tamaño) {
 		// Se inicializa: [null, null, null ...]
 		contacto = new Contacto[tamaño];
@@ -27,7 +27,7 @@ public class Agenda {
 		contacto = new Contacto[tamaño];
 		nombre = nombreAgenda;
 	}
-
+	 
 	
 	// FIN DE LOS CONSTRUCTORES
 	
@@ -61,6 +61,34 @@ public class Agenda {
 			}
 		}		   	
     	return false;
+	}
+	
+	
+	
+	// 5
+	// [null, null, null, null, null]
+	// []
+	// [Contacto, Contacto]
+	// Contacto = { }
+	// contacto = [ object,  objecto]
+	//          0         1       2        3        4
+	// aux = [object,  objecto, objecto, objecto, nuevo] tamaño = 5
+	//
+	public boolean añadirContactoSinLimite(Contacto nuevo) {
+		Contacto aux[] = new Contacto[this.contacto.length + 1];
+		
+		for (int i = 0; i < contacto.length; i++) {
+			aux[i] = contacto[i];
+		}
+		
+		aux[this.contacto.length] = nuevo;
+		contacto = aux;
+		return true;
+	}
+	// método que devuelva el tamaño de nuestra agenda
+	public int getTamaño(){
+		// el método length devuelve el tamaño de un array
+		return this.contacto.length;
 	}
 	
 	/**
@@ -98,6 +126,42 @@ public class Agenda {
 			return true;
 		}
 		return false;
+	}
+	
+	
+	public boolean eliminarContactoSinLimite(){
+		
+		Contacto aux[] = new Contacto[this.contacto.length - 1];
+		
+		for (int i = 0; i < contacto.length-1; i++) {
+			aux[i] = contacto[i];
+		}
+		
+		contacto = aux;
+		return true;
+	}
+	
+	
+	
+	public boolean eliminarContactoSinLimite(int posicion){
+		
+		if (posicion > this.contacto.length || posicion < 0) return false;
+		
+		Contacto aux[] = new Contacto[this.contacto.length - 1];
+		
+		Boolean hasSidoCopiada = false;
+		
+		for (int i = 0; i < aux.length; i++) {
+			if (posicion != i && !hasSidoCopiada) {
+				aux[i] = contacto[i];				
+			} else {
+				aux[i] = contacto[i+1];
+				hasSidoCopiada = true;
+			}			
+			
+		}
+		this.contacto = aux;
+		return true;
 	}
 	
 	/**

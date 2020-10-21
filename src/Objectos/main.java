@@ -34,9 +34,41 @@ public class main {
         
 
         
-        pruebaAgenda();
+        //pruebaAgenda();
+        
+        pruebaAgendaModificada();
         
     }
+    
+    private static void pruebaAgendaModificada(){
+    	Agenda a2 = new Agenda();
+    	System.out.println("TAMAÑO DE AGENDA(" +a2.getTamaño()+ ") : "+ a2.toString());
+    	
+    	Contacto co1 = new Contacto("pepe1", "12345789");
+    	Contacto co2 = new Contacto("pepe2", "12345789");
+    	Contacto co3 = new Contacto("pepe3", "12345789");
+    	Contacto co4 = new Contacto("pepe4", "12345789");
+    	
+    	a2.añadirContactoSinLimite(co1);
+    	a2.añadirContactoSinLimite(co2);
+    	a2.añadirContactoSinLimite(co3);
+    	a2.añadirContactoSinLimite(co4);
+    	
+    	System.out.println("TAMAÑO DE AGENDA(" +a2.getTamaño()+ ") : "+ a2.toString());
+    	
+    	a2.eliminarContactoSinLimite();
+    	
+    	System.out.println("TAMAÑO DE AGENDA(" +a2.getTamaño()+ ") : "+ a2.toString());
+    	
+    	
+    	a2.eliminarContactoSinLimite(1);
+    	System.out.println("TAMAÑO DE AGENDA(" +a2.getTamaño()+ ") : "+ a2.toString());
+    }
+    
+    
+    
+    
+    
     
     private static void pruebaAgenda() {
     	System.out.println("METODO PRUEBA AGENDA");
@@ -97,6 +129,14 @@ public class main {
     		}    		
     	}
     		
+    	
+    	/**
+    	 * [Contacto, null, null] 
+    	 * [Contacto, contacto ]
+    	 */
+    	 
+    	
+    	
     	
     }
     

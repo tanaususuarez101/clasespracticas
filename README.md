@@ -14,3 +14,21 @@ protected
 || = O -> primera condición O segunda condición
 && = Y -> primera condición Y segunda condición
 ```
+
+## GIT && GITHUB
+https://github.com/tanaususuarez101/clasespracticas/tree/master
+
+- clonar proyecto
+```
+git clone https://github.com/tanaususuarez101/clasespracticas.git
+```
+
+- Ver ramas del proyecto
+```
+git branch -a
+```
+
+-Cambiar de rama
+```
+git checkout master
+```
