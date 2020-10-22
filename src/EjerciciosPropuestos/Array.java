@@ -31,6 +31,9 @@ public class Array {
 		
 		
 		// 2) Crea un método que genere un array de enteros que se rellenen de 0 hasta el valor pasado por parámetro y lo muestre por pantalla.
+		int[] valorDevuelto = generarArray1(5);
+		imprimirArray(valorDevuelto);
+		
 		
 		
 		// 3) Crea un método que genere un array de enteros que se rellenen del valor pasado por parámetro  hasta 0 y lo muestre por pantalla.
@@ -62,6 +65,23 @@ public class Array {
 	
 	public static void metodoTest() {
 		System.out.println("Has llamado al método test");
+	}
+	
+	private static int[] generarArray1(int size) {
+		
+		int[] resultado = new int[size];
+		for (int i = 0; i < size; i++) {
+			resultado[i] = i;
+		}
+		return resultado;
+	}
+	
+	private static void imprimirArray(int[] array) {
+		System.out.print("[");
+		for (int i = 0; i < array.length; i++ ){
+			System.out.print(array[i] + ", ");
+		}
+		System.out.println("]");
 	}
 
 }
