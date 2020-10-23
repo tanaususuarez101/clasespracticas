@@ -43,9 +43,8 @@ public class Array {
 		
 		
 		// 5) Crea un método que devuelva un array con las posiciones pares de un array pasado por parámetro y lo muestre por pantalla.
-		
 
-	
+		
 		// 6) Crea un método que devuelva un array que sera la combinación de otros dos pasado por parámetro y lo muestre por pantalla.
 		
 		

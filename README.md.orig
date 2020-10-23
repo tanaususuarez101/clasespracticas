@@ -1,5 +1,26 @@
 # INICIALIZACIÓN EN LA PROGRAMACIÓN EN JAVA
 
+<<<<<<< HEAD
+## Estructura de un método:
+
+[tipo de acceso] | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros)
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+public | no - static | [¿qué devuelve?] | nombre Del Método | (parámetros)
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+private | - | [¿qué devuelve?] | nombre Del Método | (parámetros)
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+protected | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros)
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+anónimo | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros)
+
+```
+[tipo de acceso] [¿Se refiere a un objecto?]  [Lo que devuelve]                 [nombre del método] [Los parametros de entrada (tipo nombreParámetro, ....)] 			
+public			         si - void				                void
+private			        no - 						                  Tipo primitivo (no es un objecto)
+ -				 							                                 Tipo no primitivo (es un objecto)
+protected
+```
+=======
 ### Estructura de un método:
 
 | [tipo de acceso] | [¿Se refiere a un objecto?] | [¿qué devuelve?] | nombre Del Método | (parámetros) |
@@ -8,6 +29,7 @@ public | no - static | nada - void | nombre Del Método | ejemplo: int parametro
 private | sí - no lleva static | Tipo primitivo | nombre Del Método | ejemplo: Objecto parametro1, String parámetro2
 protected | - | Tipo no primitivo | - | -
 anónimo | - | - | - | -
+>>>>>>> 5a36f617fc984da329c84260ab5d6b49e641b460
 
 ### CONDICIONALES lógicos:
 ```
