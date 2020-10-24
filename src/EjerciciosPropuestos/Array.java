@@ -17,9 +17,9 @@ public class Array {
 		
 		// Ejemplo de llamada a un método estático:
 		// 1º Forma:
-		metodoTest();
+		//metodoTest();
 		// 2º Forma:
-		Array.metodoTest();
+		//Array.metodoTest();
 		
 		/*
 		 * LOS EJERCICIOS QUE APARECE A CONTINUACIÓN ES PARA PRACTICAR CON ARRAY, EL CÓDIGO QUE ESCRIBAS MÉTELO
@@ -32,7 +32,7 @@ public class Array {
 		
 		// 2) Crea un método que genere un array de enteros que se rellenen de 0 hasta el valor pasado por parámetro y lo muestre por pantalla.
 		int[] valorDevuelto = generarArray1(5);
-		imprimirArray(valorDevuelto);
+		//imprimirArray(valorDevuelto);
 		
 		
 		
@@ -55,11 +55,82 @@ public class Array {
 
 
 
+		// 9) Crear un método que pasándole como parámetro un array y un valor del mismo tipo me devuelva si está o no (si está devolverá true, en caso contrario false)
+		String[] a1 = {"valor","perro", "gato", "pepe", "jose, manue", "alberto"};
+		String a2 = "fato";
+		String a3 = "gato";
+		String a4 = "";
 		
+		System.out.println("Tamaño del array: " + a1.length);
+		
+		System.out.print("ARRAY ORDENADO ES: "  );
+		imprimirArray(generarArray8(new int[]{2, 5, 8, 4, 0}));
+		
+		
+		//System.out.println("Resultado de contain array es: " + Array.containArray(a1, a4));
 		/*
 		 * FIN DEL BLOQUE
 		 * */
 		System.out.println("Final método main...");
+	}
+	
+	// i = 1
+	// j = 0
+	// array = {2, 5, 8, 4, 0}
+	// 1º ite = {0, 5, 8, 4, 2}
+	// 2º ite_1 = {0, 4, 8, 5, 2}
+	// 2º ite_2 = {0, 2, 8, 5, 4}
+	// 3º ite_1 = {0, 2, 5, 8, 4}
+	// 3º ite_2 = {0, 2, 4, 8, 5}
+	// 3º ite_3 = {0, 2, 4, 5, 8}
+
+	private static int[] generarArray8(int[]array){
+		
+		
+		// si array es de tamaño 0, devuelvo un array sin contenido, tamaño 0
+		int temp = 0;
+		for (int i = 0; i < array.length-1; i++){
+			
+			for (int j = i+1; j < array.length; j++) {
+				
+				if (array[i] > array[j]) {					
+					temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+				}
+			}
+		}
+		
+			
+		return array;
+	}
+	
+
+	
+	
+	// siendo n el tamaño
+	//             0         1        2    ...,   n-1
+	// param1 = {'valor', 'perro', 'gato', ..., 'juan'}
+	// param2 = 'pajaro'
+	public static boolean containArray(String[] param1, String param2){
+		
+		// 5
+		for (int i = param1.length-1; i >= 0; i--){
+			if (param1[i] == param2){
+				return true;
+			}
+		}
+		
+		/*
+		for (int i = 0 ; i < param1.length; i = i+1) {
+			if (param1[i] == param2){
+				return true;
+			}
+		}
+		*/
+		
+		
+		return false;		
 	}
 	
 	public static void metodoTest() {
