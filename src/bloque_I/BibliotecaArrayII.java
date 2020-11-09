@@ -274,5 +274,21 @@ public class BibliotecaArrayII {
 	 crea un programa que según una matriz M1 cree otra matriz M2. Las filas de M2[i] serán igual que la M1[i] siempre y cuando la suma de la fila 
 	 de M1[i] sea un número par
 	 */
+	
+	
+	/*
+	 EJERCICIO 5
+	 crea un método que devuelva la cuenta de los elementos pares de cada fila:
+ 	 * Argumento
+	 * [1, 2, 2, 4]
+	 * [2, 3, 5, 2]
+	 * [1, 6, 0, 2]
+	 * 
+	 * resultado:
+	 * [3, 2, 2]
+	 * 
+	 * 
+	 * 
+	 */
 	 
 }
