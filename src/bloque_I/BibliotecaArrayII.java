@@ -49,13 +49,22 @@ public class BibliotecaArrayII {
 			System.out.print(resultado[j] + ", ");
 		}
 		*/
-		
+		/*
 		resultado = sumaArrayColumna(valores);
 		for (int j = 0; j < resultado.length;j++) {
 			System.out.print(resultado[j] + ", ");
-		}
-
-
+		}*/
+		
+		
+		int [][] matri = {{1, 2, 2, 4}, {2, 3, 5, 2}, {1, 6, 0, 2}};
+		
+		
+		printlnArray(matri);
+		System.out.println("");
+		int [][] resul = contarMatrix(matri);
+		printlnArray(resul);
+		
+		
 	}
 	private static void printlnArray(int[][] valor){
 		for (int i = 0; i < valor.length; i++){
@@ -149,7 +158,55 @@ public class BibliotecaArrayII {
 	 * [1, 0, 0, 4]
 	 * 
 	 * */
-
+	
+	
+	private static int [][] contarMatrix(int [][] enteros){
+	
+		if(enteros.length == 0) {
+			return enteros;
+		}
+		
+		int [][] result = new int [enteros.length][enteros[0].length];
+		int valor;
+		
+		for(int i = 0; i < enteros.length; i++) {
+			for(int j = 0; j < enteros[i].length;j++) {
+				valor = auxContador(enteros, enteros[i][j]);
+				if(valor > 0){
+					result[i][j] = valor -1;
+				}
+			}
+		}
+	
+		return result;	
+	}
+	
+	
+	private static int auxContador(int [][] matriz, int elemento) {
+		
+		int contador = 0;
+		
+		for(int i = 0; i < matriz.length; i++) {
+			for(int j = 0; j < matriz[i].length;j++) {
+				if(matriz[i][j] == elemento){
+					contador++;
+				}
+				
+			}
+		}
+		return contador;
+	}
+	
+	/*
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	/*
 	 * Argumento: realizar la siguiente tabla 7
