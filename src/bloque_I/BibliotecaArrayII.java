@@ -218,5 +218,61 @@ public class BibliotecaArrayII {
 	 */
 	
 	
+	
+	/*
+	   EJERCICIO 1
+		Sea M una matriz de enteros de “n” filas por “m” columnas, ambas positivas y menores 
+		que 10. Realice un programa en C++ que permita: 
+		a)  Solicitar el ingreso de n y m, según las restricciones indicadas. 
+		b)  Ingresar cada uno de los valores de la matriz. 
+		c)  Mostrar, para cada fila, la suma de sus valores, y el menor valor almacenado. 
+		d)  Mostrar, para cada columna, el promedio de sus valores y el mayor valor. 
+		e)  El mayor valor almacenado en toda la Matriz, indicando en que fila y columna se 
+		encuentra.
+		
+		
+		
+		Nota: los valores de 'n' y 'm' son pedido por consola.
+		
+		NOTA: para poder leer un valor desde consola utiliza la clase Scanner. Puedes utilizar la siguiente 
+		documentación para saber como utilizar dicho objecto.
+		URL: http://lineadecodigo.com/java/leer-numeros-teclado-java/
+		
+		
+	 */
+	
+	
+	
+	
+	/*
+	  EJERCICIO 2
+	  Se sabe que una matriz cuadrada (nxn) es simétrica si A(i, j) = A(j, i) para todo i, j dentro 
+	  de los límites de la matriz.
+	 */
+	
+	
+	
+	/*
+	 EJERCICIO 3
+	 Escriba un programa que lea una matriz  mxn (ambos valores positivos menores de 10) y transoforme las columnas en filas, y las filas en columnas
+	 por ejemplo, el usuario ingresó valores m=3 y n=5
+	 
+	 matriz = 
+	 [4, 3, 2, 1]
+	 [3, 1, 2, 6]
+	 Resultado =
+	 [4, 3]
+	 [3, 1]
+	 [2, 2]
+	 [1, 6]
+	 
+	*/
+	
+	
+	/*
+	 EJERCICIO 4
+	 crea un programa que según una matriz M1 cree otra matriz M2. Las filas de M2[i] serán igual que la M1[i] siempre y cuando la suma de la fila 
+	 de M1[i] sea un número par
+	 */
 	 
 }
