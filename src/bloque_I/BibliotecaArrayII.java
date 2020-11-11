@@ -3,6 +3,8 @@
  */
 package bloque_I;
 
+import java.util.Scanner;
+
 /**
  * @author Tanausú suárez
  *
@@ -119,6 +121,13 @@ public class BibliotecaArrayII {
 		printlnArray1(result5);
 		System.out.println("");
 		*/
+		
+		
+		
+		
+		
+		
+		leerConsola();
 		
 	}
 	
@@ -267,20 +276,28 @@ public class BibliotecaArrayII {
 	
 	
 	/* EJERCICIO 4
-	 * Argumento: realizar la siguiente tabla 7
+	 * Argumento: realizar la siguiente tabla 2
 	 * [2 , 1, 2]
 	 * [2 , 2, 4]
 	 * [2, 3, 6]
 	 * [2, 4, 8]
-	 * 
+	 * ...
+	 * [2 , 10, 20]
 	 */
+	
+	private static int[][] tablaMultiplicar(int valor){
+		// 
+		int[][] tabla = new int[10][3];
+		
+		return new int[0][0];
+	}
 	
 	
 	
 	/*
 	   EJERCICIO 5
 		Sea M una matriz de enteros de “n” filas por “m” columnas, ambas positivas y menores 
-		que 10. Realice un programa en C++ que permita: 
+		que 10. Realice un programa en java que permita: 
 		a)  Solicitar el ingreso de n y m, según las restricciones indicadas. 
 		b)  Ingresar cada uno de los valores de la matriz. 
 		c)  Mostrar, para cada fila, la suma de sus valores, y el menor valor almacenado. 
@@ -298,6 +315,34 @@ public class BibliotecaArrayII {
 		
 		
 	 */
+	
+	public static void leerConsola(){
+		Scanner reader = new Scanner(System.in);
+		
+		int numero;
+		int i = 0;
+		int[]valorLeidos = new int[4]; 
+		/*
+		do {			
+			System.out.println("Introduce un valor: ");
+			numero = reader.nextInt();
+			valorLeidos[i] =numero;
+			i++;
+			
+		} while (i < valorLeidos.length );
+		*/
+		
+		
+		for (int j = 0; j < valorLeidos.length; j++) {
+			System.out.println("Introduce un valor: ");
+			valorLeidos[j] = reader.nextInt();
+		}
+		for (int valor: valorLeidos) {
+			System.out.print(valor + ", ");
+		}
+		
+	}
+	
 	
 	
 	
@@ -355,9 +400,17 @@ public class BibliotecaArrayII {
 
 
 	/*
+	 
 	 EJERCICIO 8 
 	 crea un programa que según una matriz M1 cree otra matriz M2. Las filas de M2[i] serán igual que la M1[i] siempre y cuando la suma de la fila 
 	 de M1[i] sea un número par
+	 ejemplo:
+	 *	M1
+	 * [3,2,1] = 6
+	 * [3,1,3] = 7 
+	 * M2
+	 * [3,2,1]
+	 * 
 	 */
 	
 	
