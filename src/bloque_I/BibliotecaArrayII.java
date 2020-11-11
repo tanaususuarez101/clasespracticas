@@ -14,69 +14,140 @@ public class BibliotecaArrayII {
 	 */
 	public static void main(String[] args) {
 		/*
-		int[] valores;
-		valores = new int [5];
+		int [] ejemplo;
+		ejemplo = new int [5];
 		//[0,0,0,0,0]
-		int[] valores1 = new int[5];
-		valores = {0,0,0....,0}
+		
+		int [] ejemplo1 = new int [5];
+		ejemplo = {0,0,0....,0}
+		
+		int [][] ejemplo2  = new int [2][3];
+		     0 1 2 = j
+		  0 [0,0,0]
+		  1 [0,0,0]
+		  =
+		  i		
+		
+		     0		1			valores.length-1
+		[[0,0,0], [0,0,0], ..., [0,0,0,0]]
+		[0, 1, 4, 2, 3] = 5
+		[[],[],[]] = 3
 		*/
-		int[][] valores;
-		valores = new int[2][3];
 		
-		int[][] valores1  = new int[2][3];
-		/*	  0 1 2 = j
-		 * 0 [0,0,0]
-		 * 1 [0,0,0]
-		 * =
-		 * i		
-		 */
-		//     0		1			valores.length-1
-		// [[0,0,0], [0,0,0], ..., [0,0,0,0]]
-		//[0, 1, 4, 2, 3] = 5
-		//[[],[],[]] = 3
-		
+		int [][] valores;
+		valores = new int[2][2];
 		
 		valores[0][0] = 1;
 		valores[0][1] = 2;
 		valores[1][0] = 4;
 		valores[1][1] = 5;
+		
+	    /* [1, 2]
+		 * [4, 5]
+		 * */
+		
+		int [][] matriz = {{1, 2, 2, 4}, {2, 3, 5, 2}, {1, 6, 0, 2}};
+
+		/* [1, 2, 2, 4]
+		 * [2, 3, 5, 2]
+		 * [1, 6, 0, 2]
+		 * */
+		
+		
+		int [][] matriz7 = {{4, 3, 2, 1}, {3, 1, 2, 6}};
+		
+		/*
+		  matriz = 
+		 [4, 3, 2, 1]
+		 [3, 1, 2, 6]
+		 Resultado =
+		 [4, 3]
+		 [3, 1]
+		 [2, 2]
+		 [1, 6]
+		 */
+		 
 
 		
-		
-		int[]resultado = sumaArrayFila(valores);
+		// EJERCICIO 1
 		/*
-		for (int j = 0; j < resultado.length;j++) {
-			System.out.print(resultado[j] + ", ");
-		}
-		*/
-		/*
-		resultado = sumaArrayColumna(valores);
-		for (int j = 0; j < resultado.length;j++) {
-			System.out.print(resultado[j] + ", ");
-		}*/
-		
-		
-		int [][] matri = {{1, 2, 2, 4}, {2, 3, 5, 2}, {1, 6, 0, 2}};
-		
-		
-		printlnArray(matri);
+		printlnArray(valores);
 		System.out.println("");
-		int [][] resul = contarMatrix(matri);
-		printlnArray(resul);
+		int [] result1 = sumaArrayFila(valores);
+		printlnArray1(result1);
+		System.out.println("");
+		*/
 		
+		
+		// EJERCICIO 2
+		/*
+		printlnArray(valores);
+		System.out.println("");
+		int [] result2 = sumaArrayColumna(valores);
+		printlnArray1(result2);
+		System.out.println("");
+		*/
+		
+		
+		// EJERCICIO 3
+		/*
+		printlnArray(matriz);
+		System.out.println("");
+		int [][] result3 = contarMatrix(matriz);
+		printlnArray(result3);
+		System.out.println("");
+		*/
+		
+		// EJERCICIO 7
+		printlnArray(matriz7);
+		System.out.println("");
+		int [][] result7a = columnasEnFilas(matriz7);
+		printlnArray(result7a);
+		System.out.println("");
+		
+		
+		int [][] result7b = filasEnColumnas(matriz7);
+		printlnArray(result7b);
+		System.out.println("");
+		
+		
+		// EJERCICIO 9
+		/*
+		printlnArray(matriz);
+		System.out.println("");
+		int [] result5 = matrizPares(matriz);
+		printlnArray1(result5);
+		System.out.println("");
+		*/
 		
 	}
-	private static void printlnArray(int[][] valor){
-		for (int i = 0; i < valor.length; i++){
+	
+	
+	private static void printlnArray(int[][] valor) {
+		 
+		for(int i = 0; i < valor.length; i++) {
 			System.out.print("[");
-			for (int j = 0; j < valor[i].length;j++) {
+			
+			for(int j = 0; j < valor[i].length;j++) {
 				System.out.print(valor[i][j] + ", ");
 			}
 			System.out.print("]\n");
 		}
 	}
 	
-	/*
+	
+	private static void printlnArray1(int [] array) {
+		
+		System.out.print("[");
+		
+		for(int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + ", ");
+		}
+		System.out.println("]\n");
+	}
+	
+	
+	/* EJERCICIO 1
 	 * CREAR UN MÉTODO QUE HAGA LA SUMA POR FILA DE UNA MATRIZ 
 	 * EJEMPLO:
 	 * Argumento:
@@ -84,29 +155,31 @@ public class BibliotecaArrayII {
 	 * 1 [6,5,4]
 	 * Resultado.
 	 * [6, 15]
-	 * */
-	/*	  0 1 2 = j
+	 * 
+	 *	  0 1 2 = j
 	 * 0 [0,0,0]
 	 * 1 [0,0,0]
 	 * =
 	 * i		
 	 */
-	private static int[] sumaArrayFila(int[][] valores){
+	
+	private static int [] sumaArrayFila(int [][] valores) {
 		
-		int[] resultado = new int[valores.length];
+		int [] resultado = new int [valores.length];
 		int sumatoria;
 		
-		for (int i = 0; i < valores.length ;i++) {
+		for(int i = 0; i < valores.length; i++) {
 			sumatoria = 0;
-			for (int j = 0; j < valores[i].length ;j++) {
+			for(int j = 0; j < valores[i].length; j++) {
 				sumatoria = sumatoria + valores[i][j];
 			}
 			resultado[i] = sumatoria;
 		}
-		
 		return resultado;
 	}
-	/*
+	
+	
+	/* EJERCICIO 2
 	 * CREAR UN MÉTODO QUE HAGA LA SUMA POR COLUMNAS DE UNA MATRIZ 
 	 * EJEMPLO:
 	 * Argumento:
@@ -122,27 +195,25 @@ public class BibliotecaArrayII {
 	 * i		
 	 */
 	
-	private static int[] sumaArrayColumna(int[][] valores){
+	private static int [] sumaArrayColumna(int [][] valores){
 		
-		if (valores.length == 0) return new int[0];
+		if(valores.length == 0) return new int[0];
 			
-		int[] resultado = new int[valores[0].length];
+		int [] resultado = new int [valores[0].length];
 		int sumatoria;
 		
-		for (int i = 0; i < valores[0].length ;i++) {
+		for(int i = 0; i < valores[0].length; i++) {
 			sumatoria = 0;
-			for (int j = 0; j < valores.length ;j++) {
+			for (int j = 0; j < valores.length; j++) {
 				sumatoria = sumatoria + valores[j][i];
 			}
 			resultado[i] = sumatoria;
 		}
-		
-		
 		return resultado;
-		
 	}
 	
-	/*
+	
+	/* EJERCICIO 3
 	 * Segun u na matrix contar el número de elemento que se repiten en esa posicioón
 	 * ejempñlo:
 	 * 
@@ -159,8 +230,7 @@ public class BibliotecaArrayII {
 	 * 
 	 * */
 	
-	
-	private static int [][] contarMatrix(int [][] enteros){
+	private static int [][] contarMatrix(int [][] enteros) {
 	
 		if(enteros.length == 0) {
 			return enteros;
@@ -170,14 +240,13 @@ public class BibliotecaArrayII {
 		int valor;
 		
 		for(int i = 0; i < enteros.length; i++) {
-			for(int j = 0; j < enteros[i].length;j++) {
+			for(int j = 0; j < enteros[i].length; j++) {
 				valor = auxContador(enteros, enteros[i][j]);
 				if(valor > 0){
 					result[i][j] = valor -1;
 				}
 			}
 		}
-	
 		return result;	
 	}
 	
@@ -187,28 +256,17 @@ public class BibliotecaArrayII {
 		int contador = 0;
 		
 		for(int i = 0; i < matriz.length; i++) {
-			for(int j = 0; j < matriz[i].length;j++) {
+			for(int j = 0; j < matriz[i].length; j++) {
 				if(matriz[i][j] == elemento){
 					contador++;
 				}
-				
 			}
 		}
 		return contador;
 	}
 	
-	/*
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
+	/* EJERCICIO 4
 	 * Argumento: realizar la siguiente tabla 7
 	 * [2 , 1, 2]
 	 * [2 , 2, 4]
@@ -220,7 +278,7 @@ public class BibliotecaArrayII {
 	
 	
 	/*
-	   EJERCICIO 1
+	   EJERCICIO 5
 		Sea M una matriz de enteros de “n” filas por “m” columnas, ambas positivas y menores 
 		que 10. Realice un programa en C++ que permita: 
 		a)  Solicitar el ingreso de n y m, según las restricciones indicadas. 
@@ -245,7 +303,7 @@ public class BibliotecaArrayII {
 	
 	
 	/*
-	  EJERCICIO 2
+	  EJERCICIO 6
 	  Se sabe que una matriz cuadrada (nxn) es simétrica si A(i, j) = A(j, i) para todo i, j dentro 
 	  de los límites de la matriz.
 	 */
@@ -253,7 +311,7 @@ public class BibliotecaArrayII {
 	
 	
 	/*
-	 EJERCICIO 3
+	 EJERCICIO 7
 	 Escriba un programa que lea una matriz  mxn (ambos valores positivos menores de 10) y transoforme las columnas en filas, y las filas en columnas
 	 por ejemplo, el usuario ingresó valores m=3 y n=5
 	 
@@ -268,16 +326,43 @@ public class BibliotecaArrayII {
 	 
 	*/
 	
+	//Columnas en filas
+	private static int [][] columnasEnFilas(int [][] matriz){
+		
+		int [][] result = new int [matriz[0].length][matriz.length];
+		
+		for(int i = 0; i < matriz[0].length; i++) {
+			for(int j = 0; j < matriz.length; j++) {
+				result[i][j] = matriz[j][i];
+			}
+		}
+		return result;
+	}
 	
+	
+	//filas en columnas 
+	private static int [][] filasEnColumnas(int [][] matriz){
+		
+		int [][] result = new int [matriz[0].length][matriz.length];
+		
+		for(int i = 0; i < matriz.length; i++) {
+			for(int j = 0; j < matriz[i].length; j++) {
+				result[j][i] = matriz[i][j];
+			}
+		}
+		return result;
+	}
+
+
 	/*
-	 EJERCICIO 4
+	 EJERCICIO 8 
 	 crea un programa que según una matriz M1 cree otra matriz M2. Las filas de M2[i] serán igual que la M1[i] siempre y cuando la suma de la fila 
 	 de M1[i] sea un número par
 	 */
 	
 	
 	/*
-	 EJERCICIO 5
+	 EJERCICIO 9
 	 crea un método que devuelva la cuenta de los elementos pares de cada fila:
  	 * Argumento
 	 * [1, 2, 2, 4]
@@ -285,10 +370,31 @@ public class BibliotecaArrayII {
 	 * [1, 6, 0, 2]
 	 * 
 	 * resultado:
-	 * [3, 2, 2]
-	 * 
-	 * 
-	 * 
+	 * [3, 2, 3]
 	 */
 	 
+	private static int [] matrizPares(int [][] elementos){
+		
+		int [] result = new int [elementos.length];
+		
+		if(elementos.length == 0) {
+			return result;
+		}
+		
+		int valor;
+		
+		for(int i = 0; i < elementos.length; i++) {
+			valor = 0;
+			for(int j = 0; j < elementos[i].length; j++) {
+				if(elementos[i][j]%2 == 0){
+					valor++;
+				}
+			}
+			result[i] = valor;
+		}
+	
+		return result;	
+	}
+	
+
 }
