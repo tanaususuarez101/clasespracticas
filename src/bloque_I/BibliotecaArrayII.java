@@ -398,26 +398,29 @@ public class BibliotecaArrayII {
 		}
 		System.out.println("La matriz resultante es: ");
 		printlnArray(matriz);
-		
-		//Suma de fila y valor menor resultante
-		int [] filas = sumadorFilas(matriz);
-		System.out.println("La suma de cada fila es: ");
-		printlnArray1(filas);
-		System.out.println("El valor menor almacenado es: " + menor(filas));
+		if(matriz.length > 0) {
+			//Suma de fila y valor menor resultante
+			int [] filas = sumadorFilas(matriz);
+			System.out.println("La suma de cada fila es: ");
+			printlnArray1(filas);
+			System.out.println("El valor menor almacenado es: " + menor(filas));
+				
+			//Promedio de cada columna y valor mayor resultante
+			double [] columnas = promedioColumnas(matriz);
+			System.out.println("El promedio de cada columna es: ");
+			printlnArray2(columnas);
+			System.out.println("El valor mayor almacenado es: " + mayor(columnas));
 			
-		//Promedio de cada columna y valor mayor resultante
-		double [] columnas = promedioColumnas(matriz);
-		System.out.println("El promedio de cada columna es: ");
-		printlnArray2(columnas);
-		System.out.println("El valor mayor almacenado es: " + mayor(columnas));
-		
-		//Valor mayor de la matriz y posicion
-		int valor = mayorMatriz(matriz);
-		int fila = filaLocalizada(matriz);
-		int columna = columnaLocalizada(matriz);
-		System.out.println("El valor mayor de la matriz es: " + valor + " y se encuentra en la fila "+ fila + " y la columna " + columna);
-		
-		
+			//Valor mayor de la matriz y posicion
+			int valor = mayorMatriz(matriz);
+			int [] filaCol = filaCol(matriz);
+			if(filaCol.length > 0) {
+				System.out.println("El valor mayor de la matriz es: " + valor + " y se encuentra en la posicion "+ filaCol[0] +" ,"+ filaCol[1]);
+			}
+		} else {
+			System.out.println("[]");
+		}
+			
 		
 		/*for (int j = 0; j < valorLeidos.length; j++) {
 			System.out.println("Introduce un valor: ");
@@ -495,7 +498,7 @@ public class BibliotecaArrayII {
 	
 	private static int mayorMatriz(int [][] matriz) {	
 		
-		if(matriz.length == 0) return 0;
+		if(matriz.length == 0 || matriz[0].length == 0) return 0;
 		
 		int mayorAlmacenado = matriz[0][0];
 		
@@ -509,24 +512,26 @@ public class BibliotecaArrayII {
 		return mayorAlmacenado;
 	}
 	
-	private static int filaLocalizada (int [][] matriz) {
+	private static int [] filaCol (int [][] matriz) {
 		
-		if(matriz.length == 0) return 0;
+		if(matriz.length == 0 || matriz[0].length == 0) return new int [0];
 		
 		int contador = matriz[0][0]; 
 		int posFila = 0;
+		int posCol = 0;
 		
 		for(int i = 0; i < matriz.length; i++) {
 			for(int j = 0; j < matriz[i].length; j++) {
 				if(matriz[i][j] >= contador) {
 					contador = matriz[i][j];
 					posFila = i;
+					posCol = j;
 				}
 			}	
 		}
-		return posFila;
+		return new int [] {posFila, posCol};
 	}
-	
+	/*
 	private static int columnaLocalizada (int [][] matriz) {
 		
 		if(matriz.length == 0) return 0;
@@ -544,7 +549,7 @@ public class BibliotecaArrayII {
 		}
 		return posColumna;
 	}
-	
+	*/
 	/*
 	  EJERCICIO 6
 	  Se sabe que una matriz cuadrada (nxn) es simétrica si A(i, j) = A(j, i) para todo i, j dentro 
