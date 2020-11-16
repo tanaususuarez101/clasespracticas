@@ -69,7 +69,15 @@ public class BibliotecaArrayII {
 		 [1, 6]
 		 */
 		 
-
+		int [][] matrizSimetrica = {{1, 9, 6}, {9, 2, 1}, {6, 1, 5}};
+		
+		
+		/* matriz simetrica = 
+		 [1, 9, 6]
+		 [9, 2, 1]
+		 [6, 1, 5]
+		*/
+		
 		
 		// EJERCICIO 1
 		/*
@@ -100,17 +108,48 @@ public class BibliotecaArrayII {
 		System.out.println("");
 		*/
 		
+		// EJERCICIO 4
+		/*
+		int valor = 5;
+		int [][] result4 = tablaMultiplicar(valor);
+		printlnArray(result4);
+		System.out.println("");
+		*/
+		
+		// EJERCICIO 5
+		leerConsola();
+		
+		// EJERCICIO 6
+		/*
+		printlnArray(matrizSimetrica);
+		System.out.println("");
+		System.out.println("¿La matriz es simetrica?: " + simetrica(matrizSimetrica));
+		System.out.println("");
+		*/
+		
+		
 		// EJERCICIO 7
+		/*
 		printlnArray(matriz7);
 		System.out.println("");
 		int [][] result7a = columnasEnFilas(matriz7);
 		printlnArray(result7a);
 		System.out.println("");
 		
-		
 		int [][] result7b = filasEnColumnas(matriz7);
 		printlnArray(result7b);
 		System.out.println("");
+		*/
+		
+		
+		// EJERCICIO 8
+		/*
+		printlnArray(matriz);
+		System.out.println("");
+		int [][] result8 = copiarMatriz(matriz);
+		printlnArray(result8);
+		System.out.println("");
+		*/
 		
 		
 		// EJERCICIO 9
@@ -121,13 +160,6 @@ public class BibliotecaArrayII {
 		printlnArray1(result5);
 		System.out.println("");
 		*/
-		
-		
-		
-		
-		
-		
-		leerConsola();
 		
 	}
 	
@@ -146,6 +178,17 @@ public class BibliotecaArrayII {
 	
 	
 	private static void printlnArray1(int [] array) {
+		
+		System.out.print("[");
+		
+		for(int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + ", ");
+		}
+		System.out.println("]\n");
+	}
+	
+	
+	private static void printlnArray2(double [] array) {
 		
 		System.out.print("[");
 		
@@ -259,7 +302,7 @@ public class BibliotecaArrayII {
 		return result;	
 	}
 	
-	
+	//Metodo auxiliar del ejercicio 3
 	private static int auxContador(int [][] matriz, int elemento) {
 		
 		int contador = 0;
@@ -285,11 +328,16 @@ public class BibliotecaArrayII {
 	 * [2 , 10, 20]
 	 */
 	
-	private static int[][] tablaMultiplicar(int valor){
-		// 
-		int[][] tabla = new int[10][3];
+	private static int [][] tablaMultiplicar(int valor){
+		 
+		int [][] tabla = new int[10][3];
 		
-		return new int[0][0];
+		for(int j = 0; j < tabla.length; j++) {
+			tabla[j][0] = valor;
+			tabla[j][1] = j+1;
+			tabla[j][2] = valor * (j+1);
+		}
+		return tabla;
 	}
 	
 	
@@ -320,7 +368,7 @@ public class BibliotecaArrayII {
 		Scanner reader = new Scanner(System.in);
 		
 		int numero;
-		int i = 0;
+		int k = 0;
 		int[]valorLeidos = new int[4]; 
 		/*
 		do {			
@@ -332,20 +380,170 @@ public class BibliotecaArrayII {
 		} while (i < valorLeidos.length );
 		*/
 		
+		System.out.println("Introduce el valor de las columnas: ");
+		int n = reader.nextInt();
 		
-		for (int j = 0; j < valorLeidos.length; j++) {
+		System.out.println("Introduce el valor de las filas: ");
+		int m = reader.nextInt();
+		
+		int [][] matriz = new int [m][n];
+		
+		//Falta poner la condicion si matriz == 0
+		
+		for(int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.println("Introduce un valor de " + i + ", " + j);
+				matriz[i][j] = reader.nextInt();
+			}
+		}
+		System.out.println("La matriz resultante es: ");
+		printlnArray(matriz);
+		
+		//Suma de fila y valor menor resultante
+		int [] filas = sumadorFilas(matriz);
+		System.out.println("La suma de cada fila es: ");
+		printlnArray1(filas);
+		System.out.println("El valor menor almacenado es: " + menor(filas));
+			
+		//Promedio de cada columna y valor mayor resultante
+		double [] columnas = promedioColumnas(matriz);
+		System.out.println("El promedio de cada columna es: ");
+		printlnArray2(columnas);
+		System.out.println("El valor mayor almacenado es: " + mayor(columnas));
+		
+		//Valor mayor de la matriz y posicion
+		int valor = mayorMatriz(matriz);
+		int fila = filaLocalizada(matriz);
+		int columna = columnaLocalizada(matriz);
+		System.out.println("El valor mayor de la matriz es: " + valor + " y se encuentra en la fila "+ fila + " y la columna " + columna);
+		
+		
+		
+		/*for (int j = 0; j < valorLeidos.length; j++) {
 			System.out.println("Introduce un valor: ");
 			valorLeidos[j] = reader.nextInt();
 		}
 		for (int valor: valorLeidos) {
 			System.out.print(valor + ", ");
 		}
+		*/
+	}
+	
+	//c)  Mostrar, para cada fila, la suma de sus valores, y el menor valor almacenado.
+	
+	private static int [] sumadorFilas(int [][] matriz ){
 		
+		int [] resultado = new int [matriz.length];
+		int sumatoria;
+		
+		for(int i = 0; i < matriz.length; i++) {
+			sumatoria = 0;
+			for(int j = 0; j < matriz[i].length; j++) {
+				sumatoria = sumatoria + matriz[i][j];
+			}
+			resultado[i] = sumatoria;		
+		}
+		return resultado;
+	}
+	
+	private static int menor(int [] array) {
+		
+		if(array.length == 0) return 0;
+		
+		int valorMenor = array[0]; 
+		
+		for(int i = 1; i < array.length; i++) {
+			if(array[i] <= valorMenor) {
+				valorMenor = array[i];
+			}
+		}
+		return valorMenor;
 	}
 	
 	
+	//d)  Mostrar, para cada columna, el promedio de sus valores y el mayor valor.
 	
+	private static double [] promedioColumnas(int [][] matriz){
+		double [] resultadoCo = new double [matriz[0].length];
+		double sumatoriaCo;
+		
+		for(int i = 0; i < matriz[0].length; i++) {
+			sumatoriaCo = 0;
+			for (int j = 0; j < matriz.length; j++) {
+				sumatoriaCo = sumatoriaCo + matriz[j][i];
+			}
+			resultadoCo[i] = sumatoriaCo / matriz[0].length;
+		}
+		return resultadoCo;
+	}
 	
+	private static double mayor(double [] array) {
+		
+		if(array.length == 0) return 0;
+		
+		double valorMayor = array[0]; 
+		
+		for(int i = 1; i < array.length; i++) {
+			if(array[i] >= valorMayor) {
+				valorMayor = array[i];
+			}
+		}
+		return valorMayor;
+	}
+	
+	//e)  El mayor valor almacenado en toda la Matriz, indicando en que fila y columna se encuentra
+	
+	private static int mayorMatriz(int [][] matriz) {	
+		
+		if(matriz.length == 0) return 0;
+		
+		int mayorAlmacenado = matriz[0][0];
+		
+		for(int i = 0; i < matriz.length; i++) {
+			for(int j = 0; j < matriz[i].length; j++) {
+				if(matriz[i][j] >= mayorAlmacenado) {
+					mayorAlmacenado = matriz[i][j];
+				}
+			}
+		}
+		return mayorAlmacenado;
+	}
+	
+	private static int filaLocalizada (int [][] matriz) {
+		
+		if(matriz.length == 0) return 0;
+		
+		int contador = matriz[0][0]; 
+		int posFila = 0;
+		
+		for(int i = 0; i < matriz.length; i++) {
+			for(int j = 0; j < matriz[i].length; j++) {
+				if(matriz[i][j] >= contador) {
+					contador = matriz[i][j];
+					posFila = i;
+				}
+			}	
+		}
+		return posFila;
+	}
+	
+	private static int columnaLocalizada (int [][] matriz) {
+		
+		if(matriz.length == 0) return 0;
+		
+		int contador = matriz[0][0]; 
+		int posColumna = 0;
+		
+		for(int i = 0; i < matriz[0].length; i++) {
+			for(int j = 0; j < matriz[i].length; j++) {
+				if(matriz[i][j] >= contador) {
+					contador = matriz[i][j];
+					posColumna = j;
+				}
+			}
+		}
+		return posColumna;
+	}
 	
 	/*
 	  EJERCICIO 6
@@ -353,6 +551,21 @@ public class BibliotecaArrayII {
 	  de los límites de la matriz.
 	 */
 	
+	private static boolean simetrica(int[][]matriz) {
+		
+		if(matriz.length == 0) return false;
+		
+		if(matriz.length != matriz[0].length) return false;
+		
+		for(int i = 0; i < matriz.length; i++) {
+			for(int j = 0; j < matriz.length; j++) {
+				if(matriz[i][j] != matriz[j][i]) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 	
 	
 	/*
@@ -374,6 +587,8 @@ public class BibliotecaArrayII {
 	//Columnas en filas
 	private static int [][] columnasEnFilas(int [][] matriz){
 		
+		if(matriz.length == 0) return new int[0][0];
+		
 		int [][] result = new int [matriz[0].length][matriz.length];
 		
 		for(int i = 0; i < matriz[0].length; i++) {
@@ -384,9 +599,10 @@ public class BibliotecaArrayII {
 		return result;
 	}
 	
-	
 	//filas en columnas 
 	private static int [][] filasEnColumnas(int [][] matriz){
+		
+		if(matriz.length == 0) return new int[0][0];
 		
 		int [][] result = new int [matriz[0].length][matriz.length];
 		
@@ -400,7 +616,6 @@ public class BibliotecaArrayII {
 
 
 	/*
-	 
 	 EJERCICIO 8 
 	 crea un programa que según una matriz M1 cree otra matriz M2. Las filas de M2[i] serán igual que la M1[i] siempre y cuando la suma de la fila 
 	 de M1[i] sea un número par
@@ -412,7 +627,31 @@ public class BibliotecaArrayII {
 	 * [3,2,1]
 	 * 
 	 */
+	private static int [][] copiarMatriz(int [][] matriz){
+		
+		if(matriz.length == 0) return new int[0][0];
+		
+		int [][] matrizResult = new int [matriz.length][matriz[0].length];
+
+		for(int i = 0; i < matriz.length; i++) {
+			if(sumaFila(matriz[i])%2 == 0){
+				matrizResult[i]=matriz[i];		
+			}
+		}
+		return matrizResult;
+	}
 	
+	//Metodo auxiliar del ejercicio 8
+	private static int sumaFila (int [] array) {
+		
+		int contador=0;
+		
+		for (int i = 0 ; i < array.length;i++) {
+			contador += array[i];
+		}
+		return contador;
+	}
+
 	
 	/*
 	 EJERCICIO 9
@@ -434,8 +673,12 @@ public class BibliotecaArrayII {
 			return result;
 		}
 		
-		int valor;
+		for(int i = 0; i < elementos.length; i++) {
+				result[i] = contarPares(elementos[i]);
+		}
 		
+		/*
+		int valor;
 		for(int i = 0; i < elementos.length; i++) {
 			valor = 0;
 			for(int j = 0; j < elementos[i].length; j++) {
@@ -445,9 +688,20 @@ public class BibliotecaArrayII {
 			}
 			result[i] = valor;
 		}
-	
+		*/
 		return result;	
 	}
 	
-
+	//Metodo auxiliar del ejercicio 9
+	private static int contarPares (int [] array) {
+		
+		int contador=0;
+		
+		for (int i = 0 ; i < array.length;i++) {
+			if(array[i]%2 == 0) {
+				contador++;
+			}
+		}	
+		return contador;
+	}
 }
