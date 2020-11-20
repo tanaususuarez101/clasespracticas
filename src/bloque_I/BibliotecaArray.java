@@ -18,11 +18,11 @@ public class BibliotecaArray {
 	
 	//2) Crear un metodo pasando por parametro un array de tipo String y un elemento de tipo de String e insertamos el elemento dentro del Array por el principio
 	
-	//lista = {pepe, juan, lucas} tamaño 3
+	//lista = {pepe, juan, lucas} tamaï¿½o 3
 	//elemento = ana
 	//listaResult = {null, null, null, null}
 	
-	public static String [] añadirPrincipio(String [] lista, String elemento) {
+	public static String [] aÃ±adirPrincipio(String [] lista, String elemento) {
 		
 		String [] listaResult = new String [lista.length +1];
 	
@@ -38,11 +38,11 @@ public class BibliotecaArray {
 	
 	//3) Crear un metodo pasando por parametro un array de tipo String y un elemento de tipo de String e insertamos el elemento dentro del Array por el final
 	
-	//lista = {pepe, juan, lucas} tamaño 3
+	//lista = {pepe, juan, lucas} tamaï¿½o 3
 	//elemento = ana
 	//listaResult = {null, null, null, null}
 	
-	public static String [] añadirFinal(String [] lista, String elemento) {
+	public static String [] aï¿½adirFinal(String [] lista, String elemento) {
 		
 		String [] listaResult = new String [lista.length +1];
 		
@@ -60,14 +60,14 @@ public class BibliotecaArray {
 	
 	//Borrar primer elemento de la lista
 	//          0     1     2
-	//lista = {pepe, juan, lucas} tamaño 3
+	//lista = {pepe, juan, lucas} tamaï¿½o 3
 	//elemento = juan
 	//si esta
 	//                0     1
-	//listaResult = {null, null, } tamaño 2
+	//listaResult = {null, null, } tamaï¿½o 2
 	//si no esta
 	//elemento = ana
-	//listaResult = {null, null, null } tamaño 3
+	//listaResult = {null, null, null } tamaï¿½o 3
 	
 	public static String [] eliminarElemento(String [] lista, String elemento) {
 		
@@ -100,9 +100,9 @@ public class BibliotecaArray {
 	//5) Borrar primer elemento de la lista
 	
 	//          0     1     2
-	//lista = {pepe, juan, lucas} tamaño 3
+	//lista = {pepe, juan, lucas} tamaï¿½o 3
 	//                0     1
-	//listaResult = {null, null, } tamaño 2
+	//listaResult = {null, null, } tamaï¿½o 2
 	
 	public static String [] eliminarPrimero(String [] lista) {
 		
@@ -147,7 +147,7 @@ public class BibliotecaArray {
 	/*EJERCICIOS PROPUESTO*/
 	
 	/*
-	 * 8) crea un método que elimine un elemento de una posición dada de un array
+	 * 8) crea un mï¿½todo que elimine un elemento de una posiciï¿½n dada de un array
 	 * */
 	// 0,1,2,3,4,5
 	//{2,4,6,7,1,9} tam 6
@@ -178,7 +178,7 @@ public class BibliotecaArray {
 	}
 	
 	/*
-	 * 9) Crea un método que ordene los elemento de un array. Tendrá un parámetro boolean, si este es true, lo ordenará de mayor a menor, si es falso
+	 * 9) Crea un mï¿½todo que ordene los elemento de un array. Tendrï¿½ un parï¿½metro boolean, si este es true, lo ordenarï¿½ de mayor a menor, si es falso
 	 * de menor a mayor
 	 * */
 	
@@ -229,7 +229,7 @@ public class BibliotecaArray {
 	}
 	
 	/*
-	 * 10) crea un metodo que guarde dentro de un array un elemento en la posición que se le indica. Si la izquierda no hay valores se rellena con 0
+	 * 10) crea un metodo que guarde dentro de un array un elemento en la posiciï¿½n que se le indica. Si la izquierda no hay valores se rellena con 0
 	 * */
 	
 	//array = { , , , , }
@@ -257,10 +257,10 @@ public class BibliotecaArray {
 	}
 	
 	/*
-	 * 11)Crea un método que devuelva las letras del DNI. Las letras del DNI  se obtiene como el resto de dividir el número del DNI entre 23,
-	 * Por ejemplo, si introducimos el  DNI 20267079, el resto de dividirlo por 23 sería 8, luego la letra sería la P  
+	 * 11)Crea un mï¿½todo que devuelva las letras del DNI. Las letras del DNI  se obtiene como el resto de dividir el nï¿½mero del DNI entre 23,
+	 * Por ejemplo, si introducimos el  DNI 20267079, el resto de dividirlo por 23 serï¿½a 8, luego la letra serï¿½a la P  
 	 * 
-	 * Posición     0   1   2   3	4	5   6	7	8	9	10	11  12	13  14  15  16  17  18  19  20  21  22
+	 * Posiciï¿½n     0   1   2   3	4	5   6	7	8	9	10	11  12	13  14  15  16  17  18  19  20  21  22
 	 * Letra        T   R  	W 	A	G	M	Y	F	P	D	X	B	N   J    Z   S   Q   V   H   L   C   K   E
 	 * */
 	
@@ -275,7 +275,7 @@ public class BibliotecaArray {
 	}
 	
 	/*
-	 * 12) Crea un método que compare dos array y que devuelva true si son iguales o false si no lo son
+	 * 12) Crea un mï¿½todo que compare dos array y que devuelva true si son iguales o false si no lo son
 	 * */
 	
 	//{"hola", "mundo"};
@@ -299,8 +299,8 @@ public class BibliotecaArray {
 	}
 	
 	/*
-	 * 13) Crea un método que devuelva una sub-array de un array dado. El método recibirá además dos parámetros, que determine el principio y 
-	 * el fin de los valores que debe devolver el método
+	 * 13) Crea un mï¿½todo que devuelva una sub-array de un array dado. El mï¿½todo recibirï¿½ ademï¿½s dos parï¿½metros, que determine el principio y 
+	 * el fin de los valores que debe devolver el mï¿½todo
 	 * Por ejemplo:
 	 *   array = [2, 3, 4, 5, 6, 8] tam = 6     ini = 1, fin = 3
 	 *   array resultado = [3, 4, 5]
@@ -333,7 +333,7 @@ public class BibliotecaArray {
 		}
 		
 		
-		//Contador para saber el tamaño de lo que extraeremos en el subArray
+		//Contador para saber el tamaï¿½o de lo que extraeremos en el subArray
 		int contador = 0;
 		//ini=2 fin=4
 		//ite 1 i = 2; cont = 0
@@ -364,7 +364,7 @@ public class BibliotecaArray {
 		/*
 		
 		int [] arrayVacio = new int[0];	
-		Si inicia fuera de una posicion que no tiene el array, devuelve un array vacio del tamaño entre ini y fin
+		Si inicia fuera de una posicion que no tiene el array, devuelve un array vacio del tamaï¿½o entre ini y fin
 		Ej: array = {2,4,6}| ini=5 y fin=6 | Devuelve subArray = {0,0}
 		Pero si ini=0 y fin=3 deberia de devolver subArray = {2,4,6,0}
 		
