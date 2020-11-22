@@ -42,7 +42,7 @@ public class BibliotecaArray {
 	//elemento = ana
 	//listaResult = {null, null, null, null}
 	
-	public static String [] a�adirFinal(String [] lista, String elemento) {
+	public static String [] añadirFinal(String [] lista, String elemento) {
 		
 		String [] listaResult = new String [lista.length +1];
 		
