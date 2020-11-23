@@ -16,15 +16,15 @@ public class Agenda {
 
 	}
 	
-	public Agenda(int tamaño) {
+	public Agenda(int tamaÃ±o) {
 		// Se inicializa: [null, null, null ...]
-		contacto = new Contacto[tamaño];
+		contacto = new Contacto[tamaï¿½o];
 		nombre = "Agenda Desconocida";
 	}
 	
 
-	public Agenda(int tamaño, String nombreAgenda) {
-		contacto = new Contacto[tamaño];
+	public Agenda(int tamaï¿½o, String nombreAgenda) {
+		contacto = new Contacto[tamaï¿½o];
 		nombre = nombreAgenda;
 	}
 	 
@@ -53,7 +53,7 @@ public class Agenda {
 	 * */
 	
 	
-	public boolean añadirContacto(Contacto nuevo) {
+	public boolean aï¿½adirContacto(Contacto nuevo) {
 		for (int i = 0; i< contacto.length; i++) {
 			if (contacto[i] == null) {
 				contacto[i] = nuevo;
@@ -72,9 +72,9 @@ public class Agenda {
 	// Contacto = { }
 	// contacto = [ object,  objecto]
 	//          0         1       2        3        4
-	// aux = [object,  objecto, objecto, objecto, nuevo] tamaño = 5
+	// aux = [object,  objecto, objecto, objecto, nuevo] tamaï¿½o = 5
 	//
-	public boolean añadirContactoSinLimite(Contacto nuevo) {
+	public boolean aï¿½adirContactoSinLimite(Contacto nuevo) {
 		Contacto aux[] = new Contacto[this.contacto.length + 1];
 		
 		for (int i = 0; i < contacto.length; i++) {
@@ -85,14 +85,14 @@ public class Agenda {
 		contacto = aux;
 		return true;
 	}
-	// método que devuelva el tamaño de nuestra agenda
-	public int getTamaño(){
-		// el método length devuelve el tamaño de un array
+	// mï¿½todo que devuelva el tamaï¿½o de nuestra agenda
+	public int getTamaï¿½o(){
+		// el mï¿½todo length devuelve el tamaï¿½o de un array
 		return this.contacto.length;
 	}
 	
 	/**
-	 * Crear un método que busque un contacto
+	 * Crear un mï¿½todo que busque un contacto
 	 * true: si lo ha encontrado
 	 * false: si no lo ha encontrado
 	 */
@@ -115,7 +115,7 @@ public class Agenda {
 	}
 	
 	/***
-	 * Eliminar un contacto de la Agenda, según una posición dada
+	 * Eliminar un contacto de la Agenda, segï¿½n una posiciï¿½n dada
 	 * pista: Sustituir el contacto que queiro eliminar por null
 	 */
 	// [contacto, contacto, contacto, ..., null]
@@ -165,7 +165,7 @@ public class Agenda {
 	}
 	
 	/**
-	 * Crear un método que devuelva la lista de contacto
+	 * Crear un mï¿½todo que devuelva la lista de contacto
 	 */
 	
 	public Contacto[] getLista() {
