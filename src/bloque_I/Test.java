@@ -22,7 +22,7 @@ public class Test {
 		//2) Crear un metodo pasando por parametro un array de tipo String y un elemento de tipo de String e insertamos el elemento dentro del Array por el principio
 		
 		//                  Clase             Metodo      param1  param2
-		String [] lista2 = BibliotecaArray.añadirPrincipio(lista, valor);
+		String [] lista2 = BibliotecaArray.anadirPrincipio(lista, valor);
 		
 		System.out.print("La nueva lista al añadir al principio es: " );
 		imprimirArray(lista2);
@@ -32,7 +32,7 @@ public class Test {
 		//3) Crear un metodo pasando por parametro un array de tipo String y un elemento de tipo de String e insertamos el elemento dentro del Array por el final
 		
 		//      Clase             Metodo      param1  param2
-		String [] lista3 = BibliotecaArray.añadirFinal(lista, valor);
+		String [] lista3 = BibliotecaArray.anadirFinal(lista, valor);
 
 		System.out.print("La nueva lista al añadir al final es: " );
 		imprimirArray(lista3);

@@ -22,7 +22,7 @@ public class BibliotecaArray {
 	//elemento = ana
 	//listaResult = {null, null, null, null}
 	
-	public static String [] añadirPrincipio(String [] lista, String elemento) {
+	public static String [] anadirPrincipio(String [] lista, String elemento) {
 		
 		String [] listaResult = new String [lista.length +1];
 	
@@ -42,7 +42,7 @@ public class BibliotecaArray {
 	//elemento = ana
 	//listaResult = {null, null, null, null}
 	
-	public static String [] añadirFinal(String [] lista, String elemento) {
+	public static String [] anadirFinal(String [] lista, String elemento) {
 		
 		String [] listaResult = new String [lista.length +1];
 		

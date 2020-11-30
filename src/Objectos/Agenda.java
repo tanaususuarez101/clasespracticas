@@ -16,15 +16,15 @@ public class Agenda {
 
 	}
 	
-	public Agenda(int tamaño) {
+	public Agenda(int tamano) {
 		// Se inicializa: [null, null, null ...]
-		contacto = new Contacto[tama�o];
+		contacto = new Contacto[tamano];
 		nombre = "Agenda Desconocida";
 	}
 	
 
-	public Agenda(int tama�o, String nombreAgenda) {
-		contacto = new Contacto[tama�o];
+	public Agenda(int tamano, String nombreAgenda) {
+		contacto = new Contacto[tamano];
 		nombre = nombreAgenda;
 	}
 	 
@@ -53,7 +53,7 @@ public class Agenda {
 	 * */
 	
 	
-	public boolean a�adirContacto(Contacto nuevo) {
+	public boolean anadirContacto(Contacto nuevo) {
 		for (int i = 0; i< contacto.length; i++) {
 			if (contacto[i] == null) {
 				contacto[i] = nuevo;
@@ -74,7 +74,7 @@ public class Agenda {
 	//          0         1       2        3        4
 	// aux = [object,  objecto, objecto, objecto, nuevo] tama�o = 5
 	//
-	public boolean a�adirContactoSinLimite(Contacto nuevo) {
+	public boolean anadirContactoSinLimite(Contacto nuevo) {
 		Contacto aux[] = new Contacto[this.contacto.length + 1];
 		
 		for (int i = 0; i < contacto.length; i++) {
@@ -86,7 +86,7 @@ public class Agenda {
 		return true;
 	}
 	// m�todo que devuelva el tama�o de nuestra agenda
-	public int getTama�o(){
+	public int getTamano(){
 		// el m�todo length devuelve el tama�o de un array
 		return this.contacto.length;
 	}
