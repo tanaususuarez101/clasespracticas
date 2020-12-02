@@ -71,6 +71,46 @@ public class BibliotecaStringI {
 		//printArray2(new int[]{1,2,3,4});
 		
 		//MENU
+
+	
+	//	0  1 
+	// [1, 2,3, 5, 3]
+	
+	// 0123456789
+	// Hola mundo
+	// char[] = ["H", "o", "l", "a", ....]
+	
+	
+	// odnum aloH
+	
+		//menu();
+		
+		
+		
+		/*****************************************
+		 * 
+		 * 
+		 * OTRAS FUNCIONES IMPORTANTE EN JAVA
+		 * 
+		 * ****************************************/
+		
+		String ejemplo1 = "1236547896582458655";
+		//indexof();
+		System.out.println(ejemplo1.indexOf("5",6));
+		
+		String ejemplo2 = "Hola mundo Hola mundo mundo hola";
+		System.out.println(ejemplo2.indexOf("m"));
+		//lastIndexof
+		System.out.println(ejemplo2.lastIndexOf("m", 22));
+		
+		//substring						    |       1Âº primer parÃ¡metro    |                        2Âº parametrro         |
+		String recorte = ejemplo2.substring(ejemplo2.indexOf("m"), ejemplo2.indexOf("o",ejemplo2.indexOf("m"))+1);
+		System.out.println(recorte);
+		
+	}
+	
+	
+	public static void menu() {
 		
 		Scanner sn = new Scanner(System.in);
 		
@@ -148,17 +188,9 @@ public class BibliotecaStringI {
 			}			
 		}
 		
+	
 	}
 	
-	//	0  1 
-	// [1, 2,3, 5, 3]
-	
-	// 0123456789
-	// Hola mundo
-	// char[] = ["H", "o", "l", "a", ....]
-	
-	
-	// odnum aloH
 	
 	private static void reverse(String cadena) {
 		
@@ -282,7 +314,7 @@ public class BibliotecaStringI {
 		String s21 = reader.nextLine();
 		boolean sub = dentroPrin(s2,s21);
 		
-		System.out.println("¿La cadena contiene al principio la subcadena?: " + sub);
+		System.out.println("ï¿½La cadena contiene al principio la subcadena?: " + sub);
 	}
 	/* 0123456789
 	 * esternocleidomastoideo
@@ -491,7 +523,7 @@ public class BibliotecaStringI {
 		String s91 = reader.nextLine();
 		boolean sub = dentro(s9,s91);
 		
-		System.out.println("¿La cadena contiene la subcadena? " + sub);
+		System.out.println("ï¿½La cadena contiene la subcadena? " + sub);
 	}
 	/* 0123456789
 	 * esternocleidomastoideo
@@ -532,7 +564,7 @@ public class BibliotecaStringI {
 		System.out.println("Introduce una cadena: ");
 		String s10 = reader.nextLine();
 		boolean p1= s10.equals(reverse2(s10));
-		System.out.println("¿Es un palindromo? " + p1);
+		System.out.println("ï¿½Es un palindromo? " + p1);
 	}
 	
 	
