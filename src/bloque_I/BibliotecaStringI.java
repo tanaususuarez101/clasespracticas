@@ -7,6 +7,7 @@ public class BibliotecaStringI {
 		
 		
 		// https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+		// git reset --hard
 		
 		String holaMundo = "                   Hola mundo como estas";
 		
@@ -69,18 +70,83 @@ public class BibliotecaStringI {
 		
 		//printArray2(new int[]{1,2,3,4});
 		
+		//MENU
 		
+		Scanner sn = new Scanner(System.in);
 		
-		//EJERCICIOS
-		//leerConsola1();
-		//leerConsola2();
-		//leerConsola3();
-		//leerConsola4();
-		//leerConsola5();
-		//leerConsola6();
-		//leerConsola8();
-		//leerConsola9();
-		leerConsola10();
+		boolean salir = false;
+		int opcion;
+		
+		while(!salir) { //!=no, mientras que yo no haya dicho que salga, seguimos en el
+			
+			
+			System.out.println("1. Caracteres de una cadena");
+			System.out.println("2. Comienzo por subcadena");
+			System.out.println("3. Repeticion del caracter");
+			System.out.println("4. Contador de palabras");
+			System.out.println("5. Iniciales en mayusculas");
+			System.out.println("6. Reverse");
+			System.out.println("7. Sustitucion de caracter");
+			System.out.println("8. Conversion de mayus y min");
+			System.out.println("9. Subcadena contenida");
+			System.out.println("10. Palindromo");
+			System.out.println("11. salir");
+			
+			
+			
+			System.out.println("Introduce un numero: ");
+			opcion = sn.nextInt();
+			
+			switch(opcion) {
+				case 1:
+					leerConsola1();
+					break;
+				
+				case 2:
+					leerConsola2();
+					break;	
+					
+				case 3:
+					leerConsola3();
+					break;
+					
+				case 4:
+					leerConsola4();
+					break;	
+				
+				case 5:
+					leerConsola5();
+					break;
+				
+				case 6:
+					leerConsola6();
+					break;
+			
+				case 7:
+					leerConsola7();
+					break;
+			
+				case 8:
+					leerConsola8();
+					break;
+					
+				case 9:
+					leerConsola9();
+					break;
+					
+				case 10:
+					leerConsola10();
+					break;
+			
+				case 11:
+					salir = true;
+					break;
+					
+				default: //Controla que se vaya fuera de rango (Del 1 al 11)
+					System.out.println("Las opciones son entre 1 y 11");
+					
+			}			
+		}
 		
 	}
 	
@@ -178,45 +244,41 @@ public class BibliotecaStringI {
 	
 	// EJERCICIOOOOOO         Ordenar un array de tipo String(compareto)
 	
-	// git reset --hard
 	
 	
-	private static boolean contenida (String s1, String s2) {
-		
-		return false;
-	}
-	
-	
-	/*
-	 * hola
-	 * H
-	 * O
-	 * L
-	 * a
-	 */
 	
 	
 	/*
 	Ejercicio 1
-	Escribir por pantalla cada carácter de una cadena introducida por teclado.
-	*/
+	Escribir por pantalla cada caracter de una cadena introducida por teclado.
+    hola
+    h
+	o
+	l
+	a
+    */
+	
 	public static void leerConsola1() {
 		Scanner reader = new Scanner(System.in);
 		
-		System.out.println("Introduce una caracter: ");
+		System.out.println("Introduce una cadena: ");
 		String s1 = reader.nextLine();
-		s1 = s1.trim();
-		String [] cadenas = s1.split(" ");
+		System.out.println("La cadena esta compuesta por los siguientes caracteres: ");
+		for(int i = 0; i < s1.length(); i++) {
+			System.out.println(s1.charAt(i));
+		}
 	}
+	
 	/*
 	Ejercicio 2
-	Realizar un programa que comprueba si una cadena leída por teclado comienza por una subcadena introducida por teclado.
+	Realizar un programa que comprueba si una cadena leida por teclado comienza por una subcadena introducida por teclado.
 	*/
 	public static void leerConsola2() {
 		Scanner reader = new Scanner(System.in);
 		
 		System.out.println("Introduce una cadena: ");
 		String s2 = reader.nextLine();
+		System.out.println("Introduce una subcadena: ");
 		String s21 = reader.nextLine();
 		boolean sub = dentroPrin(s2,s21);
 		
@@ -243,7 +305,7 @@ public class BibliotecaStringI {
 	
 	/*
 	Ejercicio 3
-	Pide una cadena y un carácter por teclado (valida que sea un carácter) y muestra cuantas veces aparece el carácter en la cadena.
+	Pide una cadena y un caracter por teclado (valida que sea un caracter) y muestra cuantas veces aparece el caracter en la cadena.
 	*/
 	public static void leerConsola3() {
 		Scanner reader = new Scanner(System.in);
@@ -288,7 +350,7 @@ public class BibliotecaStringI {
 	
 	/*
 	Ejercicio 5
-	Si tenemos una cadena con un nombre y apellidos, realizar un programa que muestre las iniciales en mayúsculas.
+	Si tenemos una cadena con un nombre y apellidos, realizar un programa que muestre las iniciales en mayusculas.
 	*/
 	
 	public static void leerConsola5() {
@@ -342,14 +404,43 @@ public class BibliotecaStringI {
 	
 	/*
 	Ejercicio 7
-	Pide una cadena y dos caracteres por teclado (valida que sea un carácter), sustituye la aparición del primer carácter en la cadena por el segundo carácter.
+	Pide una cadena y dos caracteres por teclado (valida que sea un caracter), sustituye la aparicion del primer caracter en la cadena por el segundo caracter.
 	*/
 	// juan pepe p c juan cece
+	
+	public static void leerConsola7() {
+		Scanner reader = new Scanner(System.in);
+		
+		System.out.println("Introduce una cadena: ");
+		String s7 = reader.nextLine();
+		System.out.println("Introduce un caracter: ");
+		char c70 = reader.nextLine().charAt(0);
+		System.out.println("Introduce otro caracter: ");
+		char c71 = reader.nextLine().charAt(0);
+		String susti = aparicion(s7,c70,c71);
+
+		System.out.println("La cadena resultante es: " + susti );
+		
+	}	
+	
+	private static String aparicion(String s7, char primero, char segundo) {
+		
+		String result = "";
+		
+		for(int i = 0; i < s7.length(); i++) {
+			if(s7.charAt(i) == primero) {
+				result += segundo;
+			} else {
+				result += s7.charAt(i);
+			}
+		}		
+		return result;
+	}
 	
 	
 	/*
 	Ejercicio 8
-	Realizar un programa que lea una cadena por teclado y convierta las mayúsculas a minúsculas y viceversa.
+	Realizar un programa que lea una cadena por teclado y convierta las mayusculas a minusculas y viceversa.
 	*/
 	public static void leerConsola8() {
 		Scanner reader = new Scanner(System.in);
@@ -359,31 +450,33 @@ public class BibliotecaStringI {
 		String result = conversion(s8);
 
 		System.out.println("La cadena resultante es: " + result );
-		
-	
 	}	
 	/*
-	*Pepe
-	*PEPE
-	*pEPE
+	*s8 = PePe
+	*result = PEPE
+	* result2= pEpE
 	*/
-	
-	private static String conversion(String s8){
+	private static String conversion(String s8) {
 		
-		String result = "";
-		String [] separacion = s8.split(" ");
+		if(s8.isEmpty()) return "";
+		String result = s8.toUpperCase();
+		String result2 = "";
+		String aux;
 		
-		for(int i = 0; i < separacion.length; i++) {
-			if(separacion[i] == s8.toUpperCase()) {
-				separacion[i].toLowerCase();
+		for(int i = 0; i < s8.length(); i++) {
+			aux = "";
+			
+			if(s8.charAt(i) == result.charAt(i)) {
+				aux += result.charAt(i);
+				aux = aux.toLowerCase();
+				result2 += aux;	
 			} else {
-				separacion[i].toUpperCase();
-			}
-			result += separacion[i];
+				result2 += result.charAt(i);		
+			}	
 		}
-		
-		return result;
+		return result2;
 	}
+	
 	//pepejuan o pepe juan 
 	/*
 	Ejercicio 9
@@ -394,10 +487,11 @@ public class BibliotecaStringI {
 		
 		System.out.println("Introduce una cadena: ");
 		String s9 = reader.nextLine();
+		System.out.println("Introduce una subcadena: ");
 		String s91 = reader.nextLine();
 		boolean sub = dentro(s9,s91);
 		
-		System.out.println("�La cadena contiene la subcadena?: " + sub);
+		System.out.println("�La cadena contiene la subcadena? " + sub);
 	}
 	/* 0123456789
 	 * esternocleidomastoideo
@@ -428,7 +522,7 @@ public class BibliotecaStringI {
 	
 	/*
 	Ejercicio 10
-	Introducir una cadena de caracteres e indicar si es un palíndromo. Una palabra palíndroma es aquella que se lee igual adelante que atrás.
+	Introducir una cadena de caracteres e indicar si es un palindromo. Una palabra palindroma es aquella que se lee igual adelante que atras.
 	
 	palindromo = ana
 	 */
@@ -438,7 +532,7 @@ public class BibliotecaStringI {
 		System.out.println("Introduce una cadena: ");
 		String s10 = reader.nextLine();
 		boolean p1= s10.equals(reverse2(s10));
-		System.out.println(p1);
+		System.out.println("�Es un palindromo? " + p1);
 	}
 	
 	
