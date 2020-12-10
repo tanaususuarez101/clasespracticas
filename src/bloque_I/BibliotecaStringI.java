@@ -321,7 +321,7 @@ public class BibliotecaStringI {
 	 * 01234
 	 * ester
 	 */
-	private static boolean dentroPrin(String s1, String s2) {
+	public static boolean dentroPrin(String s1, String s2) {
 		
 		boolean contador = false;
 		

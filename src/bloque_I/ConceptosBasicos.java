@@ -4,10 +4,10 @@ public class ConceptosBasicos {
 	
 	public static void main(String[] a) {
 		/*
-		 *  Java es un lenguaje de programación tipado, es por ello que para utilizar una variable es necesario
+		 *  Java es un lenguaje de programaciï¿½n tipado, es por ello que para utilizar una variable es necesario
 		 *  declararla para poder utilizarla.
 		 *  
-		 *  Las variables son elementos que sirve para almacenar algún tipo de dato, el tipo de dato que guardamos hay que definirlo
+		 *  Las variables son elementos que sirve para almacenar algï¿½n tipo de dato, el tipo de dato que guardamos hay que definirlo
 		 *  cuando declaramos la variable (por ejemplo int, double, Objecto, etc)
 		 *  Ejemplo: 
 		 */
@@ -18,20 +18,20 @@ public class ConceptosBasicos {
 		char estoEsUnCaracter = 'A';
 		
 		/*
-		 *	En el ejemplo anterior, la variable 'estoEsUnEntero' está definida como 'int' (será un valor entero) aquí podremos almacenar
-		 *	valores del menos infinito hasta el más infinito, pero tiene una serie de incovenientes como el hecho de no poder guardar valores
-		 *	lógicos, como true, falso, o almacenar más de un valor.
+		 *	En el ejemplo anterior, la variable 'estoEsUnEntero' estï¿½ definida como 'int' (serï¿½ un valor entero) aquï¿½ podremos almacenar
+		 *	valores del menos infinito hasta el mï¿½s infinito, pero tiene una serie de incovenientes como el hecho de no poder guardar valores
+		 *	lï¿½gicos, como true, falso, o almacenar mï¿½s de un valor.
 		 *
-		 *	La solución más básica para almacenar más de un valor pasa por un tipo de datos que se le denominan 'array' y son declarados de forma
+		 *	La soluciï¿½n mï¿½s bï¿½sica para almacenar mï¿½s de un valor pasa por un tipo de datos que se le denominan 'array' y son declarados de forma
 		 * 	muy similar al ejemplo anterior: 
 		 *
 		 **/
-		int tamaño = 5;
-		String[] valores = new String[tamaño];
+		int tamanio = 5;
+		String[] valores = new String[tamanio];
 		
 		/*
-		 * Para declarar un array necesitamos indicarle cuanto son los elementos que vamos a guardar en él, en el ejemplo anterior, lo que almacena
-		 * en la variable 'tamaño' y además tambien tenemos que indicar el tipo de datos, como en este ejemplo es de String, (cadena de texto).
+		 * Para declarar un array necesitamos indicarle cuanto son los elementos que vamos a guardar en ï¿½l, en el ejemplo anterior, lo que almacena
+		 * en la variable 'tamaï¿½o' y ademï¿½s tambien tenemos que indicar el tipo de datos, como en este ejemplo es de String, (cadena de texto).
 		 *  el resultado sera lo siguiente: {null, null ,..., null}, debido a que una String es un tipo llamado en java Objecto,
 		 * */
 		
