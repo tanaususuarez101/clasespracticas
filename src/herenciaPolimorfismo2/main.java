@@ -1,4 +1,4 @@
-package herenciaPolimorfismo;
+package herenciaPolimorfismo2;
 
 public class main {
 
@@ -38,8 +38,29 @@ public class main {
 		System.out.println("Ejemplo 5:");
 		// Ejemplo de casteo  - Forma segura: de clase base a clase heredada, al reves puede producir error (aunque se permita)
 		// Este apartado está en la página 12 del pdf 4.1
-		Persona personaCasteada = (Persona) entrenador;
-		System.out.println(personaCasteada); 
+		//Persona personaCasteada = (Persona) entrenador;
+		//System.out.println(personaCasteada);
+		
+		System.out.println();
+		System.out.println("Ejemplo 6:");
+		entrenador.cantar();
+		
+		Entrenador entrenador2 = new Entrenador("Pepe", "er chapa");
+		
+		System.out.println();
+		System.out.println("Ejemplo 7:");
+		if (entrenador.equals(entrenador2)) {
+			System.out.println("El objecto entrenador es el mismo");
+		} else {
+			System.out.println("El objecto entrenador NO es el mismo");
+		}
+		
+		try {
+			Entrenador nuevo = entrenador2.clone();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
 		
 		
 		

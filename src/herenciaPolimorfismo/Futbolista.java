@@ -14,5 +14,8 @@ public class Futbolista extends Persona {
 		return "Futbolista "+ this.nombre +" con dorsal " + this.dorsal;
 	}
 	
+	public String toString() {
+		return "Esta es la clase Hija";
+	}
 
 }

@@ -1,4 +1,4 @@
-package herenciaPolimorfismo;
+package herenciaPolimorfismo2;
 /**
  * EJEMPLO DE CLASE ABSTRACTA
  * DEL MOMENTO QUE EXISTA UNA CLASE QUE NO SE IMPLEMENTA, YA DEBE SER ABSTRACTA 
