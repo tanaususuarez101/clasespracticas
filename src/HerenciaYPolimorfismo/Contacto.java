@@ -1,16 +1,42 @@
 package HerenciaYPolimorfismo;
 
-public class Contacto  {
+public class Contacto {
 	
-	private String nombre = "";
+	private String nombre; //Al ser una extension, no hace falta
+	private Long telefono;
 	
-	public Contacto(String nombre) {
-		this.nombre = nombre;
+	
+	public Contacto(String nombre, Long telefono) {
+		this.nombre=nombre;
+		this.telefono=telefono;
 	}
 	
 	public String getNombre() {
 		return this.nombre;
 	}
 	
+	public Long getTelefono() {
+		return this.telefono;
+	}
+	
+	public String toString() {
+		return this.nombre + ": " + this.telefono; //Añadi los 2 puntos para que fuera igual que como pedian
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre=nombre;
+	}
+	
+	public void setTelefono(Long telefono) {
+		this.telefono=telefono;
+	}
+	
+	public boolean equals(Contacto cont) {
+		
+		if(this.nombre.equals(cont.getNombre()) && this.telefono.equals(cont.getTelefono())) {
+			return true;
+		}
+		return false;
+	}
 	
 }
