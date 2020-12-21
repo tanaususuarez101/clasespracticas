@@ -33,10 +33,30 @@ public class Contacto {
 	
 	public boolean equals(Contacto cont) {
 		
-		if(this.nombre.equals(cont.getNombre()) && this.telefono.equals(cont.getTelefono())) {
+		if(this.nombre.equals(cont.getNombre())){ // && this.telefono.equals(cont.getTelefono())) {
 			return true;
 		}
 		return false;
 	}
+	
+	/*
+	 * Si la referencia > parametro > 0 return 1
+	 * 
+	 * Si la ref = param; return 0
+	 * 
+	 * si ref < param;  return < 0 return -1
+	 */
+	
+	public int compareTo(Contacto cont) {
+		//int valor = (this.nombre.compareTo(cont.getNombre());
+		if(this.nombre.compareTo(cont.getNombre()) > 0) {
+			return 1;
+		} else if(this.nombre.compareTo(cont.getNombre()) < 0){
+			return -1;
+		}
+		return 0;
+	}
+	
+	
 	
 }

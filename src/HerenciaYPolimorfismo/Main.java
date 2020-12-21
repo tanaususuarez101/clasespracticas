@@ -19,11 +19,27 @@ public class Main {
 		
 		Contacto cont1 = new Contacto("Manu", 636645241L);
 		Contacto cont2 = new Contacto("Tana", 722897361L);
+		Contacto cont3 = new Contacto("Ana", 622897361L);
+		Contacto cont4 = new Contacto("Panu", 736645241L);
 		Agenda a1 = new Agenda("Agenda");
-		a1.añadirContacto(cont1);
+		
 		a1.añadirContacto(cont2);
+		a1.añadirContacto(cont1);
+		a1.añadirContacto(cont3);
+		a1.añadirContacto(cont1);
 		System.out.println(a1.toString());
 		
+		//a1.borrarContacto(cont4);
+		//System.out.println(a1.toString());
+		a1.borrarContacto(cont1);
+		System.out.println(a1.toString());
+		
+		Agenda a3 = a1.clone();
+		System.out.println(a3.toString());
+		
+		a1.añadirContacto(cont4);
+		System.out.println(a1.toString());
+		System.out.println(a3.toString());
 	}
 	
 	
