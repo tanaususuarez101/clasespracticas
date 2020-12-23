@@ -17,9 +17,7 @@ public class Agenda implements Cloneable {
 		for(int i=0; i<lista.length;i++) {
 			ag.añadirContacto(lista[i]);
 		}
-		
 		return ag;
-		
 	}
 	
 	public boolean añadirContacto(Contacto cont) {
